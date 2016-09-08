@@ -1,0 +1,107 @@
+body {
+	background-color: #E0E0E0;
+	margin: 0;
+	padding: 0;
+	font-size: 15px;
+	font-family: sans-serif;
+}
+
+header {
+	background-color: #212121;
+	font-family: sans-serif;
+	font-size: 20px;
+	color: white;
+	text-align: center;
+	padding-top: 30px;
+	height: 120px;
+}
+
+#logo {
+	text-align: center;
+}
+
+#cancel_btn {
+	font-size: 10px;
+	color: #ffffff;
+	text-align: left;
+	padding: 10px;
+}
+
+#bodytext {
+	text-align: center;
+	margin: 0 0 20px 0;
+}
+
+#link {
+	text-align: center;
+}
+
+#logo {
+	width: 80%;
+	padding-left: 60px;
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+
+p {
+	text-align: center;
+}
+
+h3 {
+	font-size: 10px;
+}
+
+h1 {
+	margin: 10px;
+}
+
+.swatch {
+	border-radius: 50%;
+}
+
+.small-image {
+	width: 70px;
+	margin: 5px;
+	margin-top: 20px;
+}
+
+.container {
+	margin-top: 20px;
+}
+
+.nav-wrap {
+	margin: 20px auto; 
+	background-color: #212121;
+}
+
+#nav_bar {
+	margin: 0 auto;
+	list-style: none;
+	position: relative;
+	width: 960px;
+}
+
+#nav_bar li {
+	display: inline;
+}
+
+#nav_bar li a {
+	color: white;
+	font-size: 15px;
+	display: block;
+	float: left;
+	padding: 6px 10px 4px 10px;
+	text-decoration: none;
+}
+
+#nav_bar li a:hover {
+	color: grey;
+}
+
+#magic-line {
+	position: absolute;
+	bottom: -2px;
+	left: 0;
+	width: 100px;
+	background: #FFFFFF;
+}
