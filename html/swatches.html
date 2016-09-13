@@ -2,9 +2,12 @@
 <html>
 	<head>
 		<title>SampIt</title>
+		<meta charset='utf-8'>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link rel="stylesheet" href="../assets/css/style.css"/>
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous" />
+		<link href="../assets/css/index.css" media="all" rel="stylesheet" type="text/css" />
+		<link href="../assets/css/jqColor.css" media="all" rel="stylesheet" type="text/css" />
 	</head>
 	<body>
 		<header>
@@ -15,12 +18,20 @@
 				<li><a href="#">SETTINGS</a></li>
 				</ul>
 			</div>
-			<div class="col-xs-3"><a href="../index.html" id="cancel_btn">LOG OUT</a></div>
+			<div class="col-xs-3">
+				<a href="../index.html" id="cancel_btn">LOG OUT</a>
+				<div class="col-xs-3"></div>
+				<div class="col-xs-3"></div>
+			</div>
 		</header>
-			<div class=container>
-				<div class ="row">
+		<p class="the-paragraph">
+		<input class="color" value="#B6BD79" />
+		<input class="color" value="rgb(162, 63, 3)" />
+		<input class="color" value="hsl(32, 95%, 23%)" />
+		</p>
+			<div class="container">
+				<div>
 					<div class="col-xs-3">
-					<a href="#" id="camera_button">
 						<img class="small-image swatch" src="../assets/images/add.png">
 					</a>
 					</div>
@@ -34,7 +45,7 @@
 						<img class="small-image swatch" src="../assets/images/black.png">
 					</div>
 				</div>
-				<div class ="row">
+				<div>
 					<div class="col-xs-3">
 						<img class="small-image swatch" src="../assets/images/pastelpink.png">
 					</div>
@@ -48,7 +59,7 @@
 						<img class="small-image swatch" src="../assets/images/mintgreen.png">
 					</div>
 				</div>
-				<div class ="row">
+				<div>
 					<div class="col-xs-3">
 						<img class="small-image swatch" src="../assets/images/orange.png">
 					</div>
@@ -62,12 +73,48 @@
 						<img class="small-image swatch" src="../assets/images/pink.png">
 					</div>
 				</div>
-					</div>
-				</div>
 			</div>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
         <script src="http://code.jquery.com/ui/1.9.2/jquery-ui.js"></script>
         <script type ="text/javascript" src="../assets/js/script.js"></script>
         <script src="../assets/js/app.js"></script>
+        <script type="text/javascript" src="../assets/js/colors.js"></script>
+        <!-- <button onclick="$colors.colorPicker('destroy')">destroy</button> -->
+		<script type="text/javascript" src="../assets/js/colorPicker.data.js"></script>
+		<script type="text/javascript" src="../assets/js/colorPicker.js"></script>
+		<!-- <script type="text/javascript" src="../color.all.min.js"></script> -->
+		<script type="text/javascript" src="../assets/js/jqColor.js"></script>
+		<script type="text/javascript">
+var memoryColors = [
+		{r: 100, g: 200, b: 10,  a: 0.6},
+		{r: 80,  g: 100, b: 50,  a: 0.9},
+		{r: 70,  g: 80,  b: 10,  a: 0.9},
+		{r: 20,  g: 200, b: 60,  a: 0.9},
+		{r: 88,  g: 0,   b: 30,  a: 0.4},
+		{r: 100, g: 0,   b: 100, a: 0.6},
+		{r: 200, g: 0,   b: 0},
+		{r: 200, g: 30,  b: 100}
+	],
+	$myColorPicker = $('input.color').colorPicker({
+		customBG: '#222',
+		readOnly: true,
+		init: function(elm, colors) { // colors is a different instance (not connected to colorPicker)
+			elm.style.backgroundColor = elm.value;
+			elm.style.color = colors.rgbaMixCustom.luminance > 0.22 ? '#222' : '#ddd';
+		},
+		// appendTo: document.querySelector('.the-paragraph')
+		// renderCallback: function(colors, mode) {
+		// 	console.log(mode);
+		// }
+		// memoryColors: memoryColors,
+		// actionCallback: function(event, type) {
+		// 	if (type === 'toMemory') {
+		// 		// $myColorPicker.renderMemory(memoryColors);
+		// 	}
+		// }
+	}).each(function(idx, elm) {
+		// $(elm).css({'background-color': this.value})
+	});
+</script>
 	</body>
 </html>
